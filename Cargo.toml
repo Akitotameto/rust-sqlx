@@ -10,3 +10,6 @@ edition = "2018"
 sqlx = { version = "0.5.5", features = [ "mysql", "runtime-tokio-native-tls" ] }
 tokio = { version = "1.7.1", features = ["full"] }
 anyhow = "1.0"
+warp = "0.3"
+serde = { version = "1.0.116", features = ["derive"] }
+serde_json = "1.0.58"
