@@ -16,7 +16,7 @@ pub struct UserData {
 impl User {
     // DBに接続
     pub async fn read() -> anyhow::Result<Vec<User>> {
-        let pool = MySqlPool::connect("mysql://root:secret1012@127.0.0.1/sqlx_db").await?;
+        let pool = MySqlPool::connect("envの環境変数").await?;
         let users = sqlx::query_as!(User,
             "
               SELECT id, name
